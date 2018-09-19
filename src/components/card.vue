@@ -7,7 +7,6 @@
 </template>
 
 <script>
-    debugger;
     export default {
         props: ['text'],
     };
