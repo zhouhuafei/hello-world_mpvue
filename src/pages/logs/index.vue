@@ -31,7 +31,7 @@
 </script>
 
 <style lang="scss">
-    @import "../../scss/config.scss";
+    @import "../../scss/config";
 
     .log-list {
         display: flex;

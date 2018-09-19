@@ -67,7 +67,7 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../../scss/config.scss";
+    @import "../../scss/config";
 
     .userinfo {
         display: flex;

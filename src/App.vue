@@ -12,6 +12,7 @@
 </script>
 
 <style lang="scss">
+    @import "./scss/config";
     @import "./scss/iconfont";
 
     page {
@@ -25,7 +26,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 200 rpx 0;
+        padding: px2rem(200) 0;
         box-sizing: border-box;
     }
 

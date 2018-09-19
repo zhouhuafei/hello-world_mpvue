@@ -1,5 +1,6 @@
 @import "common/vendor.wxss";
 
+@charset "UTF-8";
 @font-face {
   font-family: 'iconfont';
   src: url("//at.alicdn.com/t/font_838306_ywhla6zryj.eot");
@@ -35,6 +36,6 @@ page {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200 rpx 0;
+  padding: 200rpx 0;
   box-sizing: border-box;
 }
