@@ -100,21 +100,21 @@ if (false) {(function () {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  components: {
-    card: __WEBPACK_IMPORTED_MODULE_1__components_card__["a" /* default */]
-  },
+    components: {
+        card: __WEBPACK_IMPORTED_MODULE_1__components_card__["a" /* default */]
+    },
 
-  data: function data() {
-    return {
-      logs: []
-    };
-  },
-  created: function created() {
-    var logs = wx.getStorageSync('logs') || [];
-    this.logs = logs.map(function (log) {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils_index__["a" /* formatTime */])(new Date(log));
-    });
-  }
+    data: function data() {
+        return {
+            logs: []
+        };
+    },
+    created: function created() {
+        var logs = wx.getStorageSync('logs') || [];
+        this.logs = logs.map(function (log) {
+            return Object(__WEBPACK_IMPORTED_MODULE_0__utils_index__["a" /* formatTime */])(new Date(log));
+        });
+    }
 });
 
 /***/ }),
@@ -125,28 +125,28 @@ if (false) {(function () {
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = formatTime;
 function formatNumber(n) {
-  var str = n.toString();
-  return str[1] ? str : '0' + str;
+    var str = n.toString();
+    return str[1] ? str : '0' + str;
 }
 
 function formatTime(date) {
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
 
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
 
-  var t1 = [year, month, day].map(formatNumber).join('/');
-  var t2 = [hour, minute, second].map(formatNumber).join(':');
+    var t1 = [year, month, day].map(formatNumber).join('/');
+    var t2 = [hour, minute, second].map(formatNumber).join(':');
 
-  return t1 + ' ' + t2;
+    return t1 + ' ' + t2;
 }
 
 /* unused harmony default export */ var _unused_webpack_default_export = ({
-  formatNumber: formatNumber,
-  formatTime: formatTime
+    formatNumber: formatNumber,
+    formatTime: formatTime
 });
 
 /***/ }),

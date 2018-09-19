@@ -112,46 +112,46 @@ if (false) {(function () {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  data: function data() {
-    return {
-      motto: 'Hello World',
-      userInfo: {}
-    };
-  },
-
-
-  components: {
-    card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
-  },
-
-  methods: {
-    bindViewTap: function bindViewTap() {
-      var url = '../logs/main';
-      wx.navigateTo({ url: url });
+    data: function data() {
+        return {
+            motto: 'Hello World',
+            userInfo: {}
+        };
     },
-    getUserInfo: function getUserInfo() {
-      var _this = this;
 
-      // 调用登录接口
-      wx.login({
-        success: function success() {
-          wx.getUserInfo({
-            success: function success(res) {
-              _this.userInfo = res.userInfo;
-            }
-          });
+
+    components: {
+        card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
+    },
+
+    methods: {
+        bindViewTap: function bindViewTap() {
+            var url = '../logs/main';
+            wx.navigateTo({ url: url });
+        },
+        getUserInfo: function getUserInfo() {
+            var _this = this;
+
+            // 调用登录接口
+            wx.login({
+                success: function success() {
+                    wx.getUserInfo({
+                        success: function success(res) {
+                            _this.userInfo = res.userInfo;
+                        }
+                    });
+                }
+            });
+        },
+        clickHandle: function clickHandle(msg, ev) {
+            console.log('clickHandle:', msg, ev);
         }
-      });
     },
-    clickHandle: function clickHandle(msg, ev) {
-      console.log('clickHandle:', msg, ev);
-    }
-  },
 
-  created: function created() {
-    // 调用应用实例的方法获取全局数据
-    this.getUserInfo();
-  }
+    created: function created() {
+        // 调用应用实例的方法获取全局数据
+        this.getUserInfo();
+    }
 });
 
 /***/ }),
@@ -252,6 +252,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   })]), _vm._v(" "), _c('a', {
     staticClass: "counter",
     attrs: {
+      "open-type": "redirect",
       "href": "/pages/counter/main"
     }
   }, [_vm._v("去往Vuex示例页面")])], 1)

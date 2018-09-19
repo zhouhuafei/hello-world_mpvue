@@ -105,19 +105,19 @@ if (false) {(function () {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  computed: {
-    count: function count() {
-      return __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].state.count;
-    }
-  },
-  methods: {
-    increment: function increment() {
-      __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('increment');
+    computed: {
+        count: function count() {
+            return __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].state.count;
+        }
     },
-    decrement: function decrement() {
-      __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('decrement');
+    methods: {
+        increment: function increment() {
+            __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('increment');
+        },
+        decrement: function decrement() {
+            __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('decrement');
+        }
     }
-  }
 });
 
 /***/ }),
@@ -136,19 +136,19 @@ if (false) {(function () {
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 
 var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment: function increment(state) {
-      var obj = state;
-      obj.count += 1;
+    state: {
+        count: 0
     },
-    decrement: function decrement(state) {
-      var obj = state;
-      obj.count -= 1;
+    mutations: {
+        increment: function increment(state) {
+            var obj = state;
+            obj.count += 1;
+        },
+        decrement: function decrement(state) {
+            var obj = state;
+            obj.count -= 1;
+        }
     }
-  }
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (store);
