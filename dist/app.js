@@ -20,10 +20,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.config.productionTip = false;
 __WEBPACK_IMPORTED_MODULE_1__App__["a" /* default */].mpType = 'app';
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_1__App__["a" /* default */]);
 app.$mount();
-// 因为vue的data上没绑定上$globalData，所以没办法监听$globalData的变化。待续...
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$globalData = {
-    count: 0
-};
 
 /***/ }),
 /* 5 */,

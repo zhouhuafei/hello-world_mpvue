@@ -25,6 +25,9 @@
 
 <script>
     import card from '@/components/card';
+    import store from '../../store/index.js';
+
+    let timer = null;
 
     export default {
         data() {
@@ -40,7 +43,7 @@
 
         computed: {
             count() {
-                return this.$globalData.count;
+                return store.state.count;
             },
         },
 
@@ -65,7 +68,6 @@
                 console.log('clickHandle:', msg, ev);
             },
         },
-
         created() {
             // 调用应用实例的方法获取全局数据
             this.getUserInfo();
@@ -80,9 +82,13 @@
         mounted() {
             console.log('mounted');
             console.log(this);
-            setInterval(() => {
-                this.$globalData.count++;
+            timer = setInterval(() => {
+                store.commit('countIncrement');
             }, 1000);
+        },
+        onUnload() {
+            console.log('onUnload');
+            clearInterval(timer);
         },
     };
 </script>

@@ -22,8 +22,8 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_bc53151e_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_bc53151e_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(22);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -79,11 +79,12 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 19:
+/***/ 18:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__store_index_js__ = __webpack_require__(2);
 //
 //
 //
@@ -111,6 +112,9 @@ if (false) {(function () {
 //
 
 
+
+
+var timer = null;
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function data() {
@@ -127,7 +131,7 @@ if (false) {(function () {
 
     computed: {
         count: function count() {
-            return this.$globalData.count;
+            return __WEBPACK_IMPORTED_MODULE_1__store_index_js__["a" /* default */].state.count;
         }
     },
 
@@ -154,7 +158,6 @@ if (false) {(function () {
             console.log('clickHandle:', msg, ev);
         }
     },
-
     created: function created() {
         // 调用应用实例的方法获取全局数据
         this.getUserInfo();
@@ -167,19 +170,21 @@ if (false) {(function () {
         console.log('onShow');
     },
     mounted: function mounted() {
-        var _this2 = this;
-
         console.log('mounted');
         console.log(this);
-        setInterval(function () {
-            _this2.$globalData.count++;
+        timer = setInterval(function () {
+            __WEBPACK_IMPORTED_MODULE_1__store_index_js__["a" /* default */].commit('countIncrement');
         }, 1000);
+    },
+    onUnload: function onUnload() {
+        console.log('onUnload');
+        clearInterval(timer);
     }
 });
 
 /***/ }),
 
-/***/ 23:
+/***/ 22:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

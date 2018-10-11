@@ -3,39 +3,7 @@ require("../../common/vendor.js");
 global.webpackJsonp([3],[
 /* 0 */,
 /* 1 */,
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(13);
-// https://vuex.vuejs.org/zh-cn/intro.html
-// make sure to call Vue.use(Vuex) if using a module system
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
-
-var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-    state: {
-        count: 0
-    },
-    mutations: {
-        increment: function increment(state) {
-            var obj = state;
-            obj.count += 1;
-        },
-        decrement: function decrement(state) {
-            var obj = state;
-            obj.count -= 1;
-        }
-    }
-});
-
-/* harmony default export */ __webpack_exports__["a"] = (store);
-
-/***/ }),
+/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
@@ -120,7 +88,7 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store_index_js__ = __webpack_require__(2);
 //
 //
 //
@@ -140,15 +108,15 @@ if (false) {(function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
     computed: {
         count: function count() {
-            return __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].state.count;
+            return __WEBPACK_IMPORTED_MODULE_0__store_index_js__["a" /* default */].state.count;
         }
     },
     methods: {
-        increment: function increment() {
-            __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('increment');
+        countIncrement: function countIncrement() {
+            __WEBPACK_IMPORTED_MODULE_0__store_index_js__["a" /* default */].commit('countIncrement');
         },
-        decrement: function decrement() {
-            __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].commit('decrement');
+        countDecrement: function countDecrement() {
+            __WEBPACK_IMPORTED_MODULE_0__store_index_js__["a" /* default */].commit('countDecrement');
         }
     }
 });
@@ -167,14 +135,14 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "eventid": '0'
     },
     on: {
-      "click": _vm.increment
+      "click": _vm.countIncrement
     }
   }, [_vm._v("+")]), _vm._v(" "), _c('button', {
     attrs: {
       "eventid": '1'
     },
     on: {
-      "click": _vm.decrement
+      "click": _vm.countDecrement
     }
   }, [_vm._v("-")])], 1), _vm._v(" "), _c('a', {
     staticClass: "home",
