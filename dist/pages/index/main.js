@@ -1,6 +1,6 @@
 require("../../common/manifest.js");
 require("../../common/vendor.js");
-global.webpackJsonp([3],{
+global.webpackJsonp([2],{
 
 /***/ 15:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -22,8 +22,8 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_bc53151e_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_bc53151e_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(23);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -79,11 +79,12 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 18:
+/***/ 19:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(3);
+//
 //
 //
 //
@@ -124,6 +125,12 @@ if (false) {(function () {
         card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
     },
 
+    computed: {
+        count: function count() {
+            return this.$globalData.count;
+        }
+    },
+
     methods: {
         bindViewTap: function bindViewTap() {
             var url = '../logs/main';
@@ -151,12 +158,28 @@ if (false) {(function () {
     created: function created() {
         // 调用应用实例的方法获取全局数据
         this.getUserInfo();
+        console.log('created');
+    },
+    onLoad: function onLoad() {
+        console.log('onLoad');
+    },
+    onShow: function onShow() {
+        console.log('onShow');
+    },
+    mounted: function mounted() {
+        var _this2 = this;
+
+        console.log('mounted');
+        console.log(this);
+        setInterval(function () {
+            _this2.$globalData.count++;
+        }, 1000);
     }
 });
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,7 +278,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "open-type": "redirect",
       "href": "/pages/counter/main"
     }
-  }, [_vm._v("去往Vuex示例页面")])], 1)
+  }, [_vm._v("去往Vuex示例页面")]), _vm._v(" "), _c('div', [_vm._v("globalData.count:" + _vm._s(_vm.count))])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

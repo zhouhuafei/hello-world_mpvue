@@ -19,6 +19,7 @@
             <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy"/>
         </form>
         <a open-type="redirect" href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+        <div>globalData.count:{{count}}</div>
     </div>
 </template>
 
@@ -35,6 +36,12 @@
 
         components: {
             card,
+        },
+
+        computed: {
+            count() {
+                return this.$globalData.count;
+            },
         },
 
         methods: {
@@ -62,6 +69,20 @@
         created() {
             // 调用应用实例的方法获取全局数据
             this.getUserInfo();
+            console.log('created');
+        },
+        onLoad() {
+            console.log('onLoad');
+        },
+        onShow() {
+            console.log('onShow');
+        },
+        mounted() {
+            console.log('mounted');
+            console.log(this);
+            setInterval(() => {
+                this.$globalData.count++;
+            }, 1000);
         },
     };
 </script>
