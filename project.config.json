@@ -10,7 +10,7 @@
 	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
 	"appid": "wx464947edc7d048ae",
-	"projectname": "suibianxiexie_mpvue",
+	"projectname": "hello-world_mpvue",
 	"condition": {
 		"search": {
 			"current": -1,
